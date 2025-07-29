@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Careers</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  {%include 'nav.html'%}
+  <img class="img-fluid" id="banner" src="{{ url_for('static', filename='banner.jpg') }}" alt="Banner Image" width="100%";"margin-bottom:16px">
+
+  <div class="container">
+    <h1 class="text-center mt-4">{{ company_name }} Techno Careers</h1>
+
+    <div class="row" style "maegin-bottom:16px">
+      <div class="col-md-6">
+    <p class="lead">
+      A career is a journey of professional growth and personal development, shaped by your skills, interests, and goals. It involves pursuing meaningful work, gaining experience, and continuously learning to achieve success and fulfillment. A strong career not only provides financial stability but also a sense of purpose and identity in life.
+    </p>
+  </div>
+  <div class="d-none d-md-block col-md-6">
+    <img src="/static/people.jpg"  style="height:320px;border-radius:4px;">
+  </div>
+</div>
+    <h2 class="text-center mt-4 mb-3">Open Positions</h2>
+
+    <div>
+      {% for job in jobs %}
+        {%include 'jobitem.html'%}
+      {% endfor %}
+    </div>
+
+    <div class="text-center mt-4">
+      <a  class="btn btn-primary btn-lg"href =" mailto:hello@techno.ai?subject=Question%20about%20open%20position&body=my%20name%20%3A%20%3Center%20your%20name%20here%3E%0D%0Amy%20question%3A%3Center%20your%20Question%20here%3E ">Contact Us</a>
+      <p class="mt-4">Copyright 2025, Techno</p>
+    </div>
+  </div>
+  {%include 'footer.html'%}
+</body>
+</html>
