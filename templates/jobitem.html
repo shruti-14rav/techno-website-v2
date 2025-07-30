@@ -1,4 +1,4 @@
-<div class="row border-bottom" style="margin-bottom: 16px; padding-bottom: 8px;">
+z<div class="row border-bottom" style="margin-bottom: 16px; padding-bottom: 8px;">
   <div class="col-10">
     <h4 style="color: rgb(120, 120, 120); margin-bottom: 4px;">
       {{ job['title'] }}
@@ -13,6 +13,6 @@
     {% endif %}
   </div>
   <div class="col-2 d-flex align-items-center justify-content-end">
-    <a href="mailto:hello@techno.ai?subject=application mailto:hello@techno.ai?subject=Application%20for%20{{job['title']}}&body=my%20name%20%3A%20%3Center%20your%20name%20here%3E%0D%0Amy%20resume%20link%20%3A%20%3Center%20your%20link%3E%0D%0Amy%20linkedin%20link%20%3A%20%3Center%20your%20link%3E  for{{job['title']}}" type="button" class="btn btn-outline-primary">Apply</a>
+    <a href="/job/{{job['id']}} type="button" class="btn btn-outline-primary">Apply</a>
   </div>
 </div>

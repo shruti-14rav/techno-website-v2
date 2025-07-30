@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ job.title }} - Techno Careers</title>
+  {% include 'bootstrap.html' %}
+</head>
+<body>
+  {% include 'nav.html' %}
+
+  <div class="container">
+    <h1 class="text-center mt-4">Techno Careers</h1>
+
+    <h3 class="mb-2">{{ job.title }}</h3>
+    <p class="lead">{{ job.location }}</p>
+
+    {% if job.responsibilities %}
+      <h4>Responsibilities</h4>
+      <ul>
+        {% for line in job.responsibilities.split('\n') %}
+          <li>{{ line }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if job.requirement %}
+      <h4>Requirements</h4>
+      <ol>
+        {% for line in job.requirement.split('\n') %}
+          <li>{{ line }}</li>
+        {% endfor %}
+      </ol>
+    {% endif %}
+
+    <h4>Salary</h4>
+    <p>{{ job.currency }}{{ job.salary }}</p>
+  </div>
+
+  {% include 'footer.html' %}
+</body>
+</html>
