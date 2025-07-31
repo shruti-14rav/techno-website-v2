@@ -1,0 +1,29 @@
+<h2 class="mb-3">Submit Your Application</h2>
+<form action="/job/{{ job.id }}/apply" method="post">
+  <div class="mb-3">
+    <label for="full-name">Full Name:</label>
+    <input type="text"required name="full_name" id="full-name" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="email">Email:</label>
+    <input type="email"required name="email" id="email" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="resume-url">Resume URL:</label>
+    <input type="url" name="resume_url" id="resume-url" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="linkedin-url">LinkedIn Profile URL:</label>
+    <input type="url" name="linkedin_url" id="linkedin-url" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="experience">Work Experience:</label>
+    <textarea name="experience" id="experience" class="form-control" rows="5" required></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit Application</button>
+</form>
